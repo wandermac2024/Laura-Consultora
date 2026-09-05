@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo de perfumes e cosméticos">
+  <title>Catálogo de Perfumes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topo">
+  <div class="container nav">
+    <div>
+      <div id="nomeLoja" class="logo">Minha Perfumaria</div>
+      <div id="subtitulo" class="subtitulo">Perfumes e cosméticos</div>
+    </div>
+    <button class="cart-btn" onclick="abrirCarrinho()">🛒 Carrinho <span id="contador">0</span></button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <h1>Encontre seu próximo perfume</h1>
+      <p>Escolha seus produtos, monte o pedido e finalize pelo WhatsApp.</p>
+      <a href="#catalogo" class="btn">Ver catálogo</a>
+    </div>
+  </section>
+
+  <section id="catalogo" class="container catalogo">
+    <div class="filtros">
+      <input id="busca" type="search" placeholder="🔎 Buscar produto..." oninput="renderizarProdutos()">
+      <select id="marca" onchange="renderizarProdutos()">
+        <option value="">Todas as marcas</option>
+      </select>
+      <select id="categoria" onchange="renderizarProdutos()">
+        <option value="">Todas as categorias</option>
+      </select>
+    </div>
+    <div id="produtos" class="grid"></div>
+  </section>
+</main>
+
+<div id="carrinhoModal" class="modal">
+  <div class="modal-box">
+    <button class="fechar" onclick="fecharCarrinho()">×</button>
+    <h2>Seu pedido</h2>
+    <div id="itensCarrinho"></div>
+    <div class="total"><span>Total</span><strong id="total">R$ 0,00</strong></div>
+
+    <div class="checkout">
+      <h3>Finalizar pelo WhatsApp</h3>
+      <input id="clienteNome" placeholder="Seu nome">
+      <input id="clienteObs" placeholder="Observação (opcional)">
+      <button class="btn whatsapp" onclick="finalizarWhatsApp()">Enviar pedido pelo WhatsApp</button>
+    </div>
+
+    <div class="pix">
+      <h3>Pagamento via Pix</h3>
+      <p id="pixTexto"></p>
+      <button class="btn secundario" onclick="copiarPix()">Copiar chave Pix</button>
+      <small>Depois do pagamento, envie o comprovante pelo WhatsApp.</small>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <strong id="footerNome">Minha Perfumaria</strong>
+    <p>Catálogo online • Pedidos pelo WhatsApp • Pagamento via Pix</p>
+  </div>
+</footer>
+
+<script src="produtos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
