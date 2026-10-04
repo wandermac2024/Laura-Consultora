@@ -21,4 +21,8 @@ const produtos = [
   {id:8,marca:"Avon",categoria:"Hidratantes",nome:"Gel Hidratante Pós-Sol",descricao:"Gel Hidratante",preco:44.90,imagem:"imagens/produto-08.png"},
   {id:9,marca:"Eudora",categoria:"Perfumes",nome:"Body Splash Desodorante Colônia Instance Baunilha 200ml",descricao:"Body Splash",preco:72.90,imagem:"imagens/produto-09.png"},
   {id:10,marca:"Eudora",categoria:"Cosméticos",nome:"Paleta de Sombra Turbo SOUL 8g",descricao:"Cosméticos",preco:57.90,imagem:"imagens/produto-10.png"},
+{id:11,marca:"Natura",categoria:"Perfumes",nome:"Deo Colônia Masculino Kaiak Urbe 100 ml",descricao:"Deo Colônia",preco:189.90,imagem:"imagens/produto-11.png"},
+{id:12,marca:"Natura",categoria:"Perfumes",nome:"Deo Parfum Feminino Essencial Safran 100 ml",descricao:"Deo Parfum desenvolvido em Dubai",preco:289.90,imagem:"imagens/produto-12.png"},
+
+
 ];
